@@ -1,0 +1,81 @@
+.nap-the-form-padding {
+    width: 100%;
+    padding: 100px 0px;
+    display: flex;
+    
+    -o-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    -ms-align-items: center;
+    -o-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.nap-the-form-cover {
+    width: 600px;
+    min-height: 300px;;
+    border: 1px solid #e8ebed;
+}
+
+.nap-the-title {
+    background-color: #C4E2FE;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: #000;
+    font-weight: 500;
+    border-bottom: 1px solid #e8ebed;
+}
+
+.nap-the-form-body {
+    padding: 0px 16px;
+}
+
+.form-nap-the-control {
+    width: 100%;
+    padding: 11px 7px;
+    font-size: 15px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.loai-the-nap-cover {
+    padding: 12px 0px;
+    margin-top: 8px;
+}
+
+.loai-the-nap-cover i {
+    padding-right: 8px;
+}
+
+.input-series {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10.5px;
+    font-size: 15px;
+}
+
+.gui-the-btn-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.gui-the-btn-cover span {
+    padding: 12px 15px;
+    background-color: #ccc;
+    border-radius: 5px;
+    font-weight: 550;
+    color: #000;
+}
+
+.gui-the-btn-cover:hover span {
+    background-color: #F16339;
+    color: #fff;
+}

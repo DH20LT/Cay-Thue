@@ -1,0 +1,78 @@
+@{
+    ViewData["Title"] = "Đăng Ký - Đăng Nhập";
+}
+
+<div class="login">
+    <i class="ri-moon-line changed-theme" id="theme-button"></i>
+    <div class="login__content">
+        <div class="login__img">
+            <img src="assets/img/anhlogin.png" alt="">
+        </div>
+
+        <div class="login__forms">
+            <form action="" class="login__registre" id="login-in">
+                <h1 class="login__title text-color-black">Đăng Nhập</h1>
+
+                <div class="login__box">
+                    <i class='bx bx-user login__icon'></i>
+                    <input type="text" placeholder="Tài khoản" id="login-username" class="login__input">
+                </div>
+
+                <div class="login__box">
+                    <i class='bx bx-lock-alt login__icon'></i>
+                    <input type="password" placeholder="Mật khẩu" id="login-password" class="login__input">
+                </div>
+
+                <a href="#" class="login__forgot">Quên mật khẩu?</a>
+
+                <a href="#" id="login-btn" class="login__button">Đăng Nhập</a>
+
+                <div>
+                    <span class="login__account">Chưa có tài khoản?</span>
+                    <span class="login__signin" id="sign-up">Đăng ký nhanh</span>
+                </div>
+            </form>
+
+            <form action="" class="login__create none" id="login-up">
+                <h1 class="login__title text-color-black">Đăng Ký Tài Khoản</h1>
+
+                <div class="login__box">
+                    <i class='bx bx-user login__icon'></i>
+                    <input type="text" placeholder="Tài khoản" id="regis-username" class="login__input">
+                </div>
+
+                <div class="login__box">
+                    <i class='bx bx-at login__icon'></i>
+                    <input type="text" placeholder="Địa chỉ Email" id="regis-email" class="login__input">
+                </div>
+
+                <div class="login__box">
+                    <i class='bx bx-lock-alt login__icon'></i>
+                    <input type="password" placeholder="Mật khẩu" id="regis-password" class="login__input">
+                </div>
+
+                <a href="#" id="regis-btn" class="login__button">Đăng Ký</a>
+
+                <div>
+                    <span class="login__account">Đã có tài khoản?</span>
+                    <span class="login__signup" id="sign-in">Đăng nhập</span>
+                </div>
+
+                <div class="login__social">
+                    <a href="#" class="login__social-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="#" class="login__social-icon">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="#" class="login__social-icon">
+                        <i class='bx bxl-google'></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--===== MAIN JS =====-->
+<script src="../login-register/assets/js/main.js"></script>

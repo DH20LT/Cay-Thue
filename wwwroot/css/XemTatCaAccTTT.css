@@ -1,0 +1,18 @@
+.so-trang {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.so-trang p {
+    padding: 10px 15px;
+    background-color: #F6C1CB;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.so-trang a {
+    text-decoration: none;
+    color: #000;
+}

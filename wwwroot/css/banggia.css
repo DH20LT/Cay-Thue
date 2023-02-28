@@ -1,0 +1,16 @@
+.bang-gia-cay-thue-cover {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.anh-bang-gia-cay-thue-1 {
+    object-fit: cover;
+    width: 100%;
+
+}
+
+.anh-bang-gia-cay-thue {
+    width: 100%;
+}
