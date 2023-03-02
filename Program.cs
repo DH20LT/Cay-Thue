@@ -36,6 +36,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=webcaythue}/{id?}");
+    pattern: "{controller=AccountLOLInfo}/{action=Index}/{id?}");
 
 app.Run();
