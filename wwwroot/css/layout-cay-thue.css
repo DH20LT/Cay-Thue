@@ -291,11 +291,11 @@ html {
 /*    opacity: 0.8;*/
 /*}*/
 
-.with-slider-bar-content {
+/*.with-slider-bar-content {
     width: 100%;
-}
+}*/
 
-.with-slider-bar-content .content {
+/*.with-slider-bar-content .content {
     width: 100%;
     padding: 0 250px;
 
@@ -410,6 +410,99 @@ html {
 
 #radio-4:checked ~ .navigation-auto .auto-btn-4 {
     background: #1473E6;
+}*/
+
+.pl-2 {
+    padding-left: 1rem;
+}
+
+.size-1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.size-1, .size-2 {
+    font-weight: 250;
+}
+
+.size-3 {
+    font-size: 1.85rem;
+    font-weight: 200;
+    line-height: 1.1;
+}
+
+.size-4 {
+    font-size: 1.35rem;
+    line-height: 2.25;
+}
+
+.size-5 {
+    font-size: 1.15rem;
+    font-weight: 120;
+}
+
+.size-5, .size-6 {
+    line-height: 1.5;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.table td, .table th {
+    padding: .75rem !important;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.specUl-lol {
+    background: linear-gradient(#186782,#134656) !important;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.specUl, .specUl-lol {
+    padding: 0;
+    border-bottom: 4px solid #1e90ff;
+    display: flex;
+    margin: 0;
+    color: #fff;
+}
+
+.specUl-lol .nav-link {
+        text-align: center;
+        width: 100%;
+}
+
+.specUl-lol a {
+        margin: 0;
+        padding: 10px 30px;
+        color: #fff;
+}
+
+.specUl li, .specUl-lol a {
+        display: inline-block;
+        cursor: pointer;
+}
+
+.specUl-lol li:hover, .specUl-lol > li > .active {
+        background: #007bff;
+}
+
+.specUl-lol a:hover {
+        color: #fff;
 }
 
 .content .list-account-content {
