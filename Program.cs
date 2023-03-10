@@ -5,11 +5,12 @@ using CayThue.Models.Users;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("LocalDb");
+var connectionString = "Data Source=" +
+                       Path.Combine(Directory.GetCurrentDirectory(), "Data\\mydb.db");
 
 // Add services to the container.
 builder.Services.AddDbContext<CayThueDbContext>(optionsAction =>
-    optionsAction.UseSqlServer(connectionString)
+    optionsAction.UseSqlite(connectionString)
 );
 
 // Add services to the container.
