@@ -2,10 +2,15 @@
 
 namespace CayThue.Controllers;
 
-public class AccountLOLInfoController : Controller
+public class AccountController : Controller
 {
     // GET
     public IActionResult Index()
+    {
+        return View();
+    }
+    
+    public IActionResult AccountList()
     {
         return View();
     }
