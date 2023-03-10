@@ -504,6 +504,362 @@ html {
         color: #fff;
 }
 
+/*START LOL Account Info Demo*/
+.content-account-info-demo {
+    width: 100%;
+    padding: 0 450px;
+}
+
+.m-r-2 {
+    margin-right: 2rem;
+}
+
+.link-disable-color a {
+    color: #000;
+    text-decoration: none;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.asLink {
+    cursor: pointer;
+}
+
+.badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+.aNav li, .list-spec {
+    list-style: none;
+}
+
+.size-35, .size-4, .size-45 {
+    font-weight: 150;
+}
+
+.aNav ul > :first-child, .list-spec li:first-child {
+    margin-left: 0;
+}
+
+.list-spec li {
+    margin-left: 8px;
+    display: inline;
+}
+
+i.fab, i.far, i.fas {
+    min-width: 15px;
+    display: inline-block;
+}
+
+.aNav li, .list-spec {
+    list-style: none;
+}
+
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-white, .footerWhite, .leftMenuDiv, .tabcontent {
+    background: #fff;
+}
+/*END LOL Account Info Demo Page*/
+
+/*START Trade Page*/
+.exhibit-detail-field {
+    background-color: white;
+    padding: 16px;
+}
+
+.pad-top-16 {
+    padding-top: 16px;
+}
+
+.content-trade {
+    width: 680px;
+    margin: 16px auto;
+    padding: 16px 0;
+}
+
+.exhibit-detail-field .exhibit-contents p.product-info-title {
+    font-size: 12px;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 8px;
+}
+
+.exhibit-detail-field .exhibit-contents .exhibit-images {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 80px;
+    height: 80px;
+    background-color: #666;
+}
+
+    .exhibit-detail-field .exhibit-contents .exhibit-images img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-height: 80px;
+        max-width: 80px;
+    }
+
+.exhibit-detail-field .exhibit-contents .exhibit-description {
+    display: inline-block;
+    vertical-align: top;
+    width: 500px;
+    margin-left: 20px;
+}
+
+.content-trade h2 {
+    font-size: 16px;
+}
+
+    .content-trade h2 span {
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+.exhibit-detail-field .exhibit-contents .exhibit-description table {
+    margin-top: 6px;
+    font-size: 11px;
+    text-align: left;
+    height: 48px;
+}
+
+    .exhibit-detail-field .exhibit-contents .exhibit-description table th {
+        font-weight: normal;
+        padding-right: 16px;
+    }
+
+.exhibit-detail-field .buyer-info {
+    margin-top: 16px;
+}
+
+    .exhibit-detail-field .buyer-info a.user {
+        position: relative;
+        display: block;
+        background-color: #f5f5f5;
+        line-height: 24px;
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+        .exhibit-detail-field .buyer-info a.user .profile-image {
+            display: inline-block;
+            vertical-align: top;
+            background-color: #dbdbdb;
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 0 8px 0 16px;
+        }
+
+            .exhibit-detail-field .buyer-info a.user .profile-image img {
+                max-width: 24px;
+                max-height: 24px;
+            }
+
+        .exhibit-detail-field .buyer-info a.user span.nickname {
+            margin-right: 8px;
+        }
+
+.exhibit-detail-field a.flow {
+    margin-top: 16px;
+    text-align: center;
+    text-decoration: underline;
+    margin: 16px auto 0 auto;
+    width: 200px;
+    display: block;
+    color: #498fe1;
+}
+
+.todo-block {
+    margin: 20px;
+    padding: 16px;
+    background-color: #fffff1;
+}
+
+    .todo-block p.todo {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+.conversation-block {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.content-trade h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.messages ul {
+    list-style: none;
+}
+
+    .messages ul li.message-and-images {
+        margin-bottom: 16px;
+    }
+
+        .messages ul li.message-and-images .user {
+            display: inline-block;
+            margin-right: 16px;
+            vertical-align: top;
+            margin-top: 8px;
+        }
+
+            .messages ul li.message-and-images .user img {
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-radius: 15px;
+                line-height: 5px;
+            }
+
+        .messages ul li.message-and-images .message {
+            display: inline-block;
+            position: relative;
+        }
+
+            .messages ul li.message-and-images .message .context-block {
+                width: 594px;
+                padding: 8px;
+                border: 1px solid #bdbdbd;
+                border-radius: 3px;
+                background-color: #f8f8f8;
+                margin-bottom: 8px;
+                overflow-wrap: break-word;
+            }
+
+            .messages ul li.message-and-images .message .datetime {
+                width: 594px;
+                text-align: right;
+                color: #a1a1a1;
+                font-size: 12px;
+            }
+
+.messages .post-message {
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 40px;
+}
+
+    .messages .post-message .user {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 8px;
+        margin-right: 16px;
+        margin-bottom: 24px;
+    }
+
+        .messages .post-message .user img {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            line-height: 5px;
+        }
+
+    .messages .post-message .message {
+        display: inline-block;
+        width: 594px;
+    }
+
+        .messages .post-message .message textarea {
+            width: 594px;
+            height: 120px;
+            padding: 8px;
+            border: 1px solid #bdbdbd;
+            border-radius: 3px;
+        }
+
+.message .image-field {
+    height: 80px;
+    display: inline;
+}
+
+.messages .post-message .message .image-field li {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 16px;
+}
+
+    .messages .post-message .message .image-field li label {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background-color: #f1f1f1;
+        color: gainsboro;
+        text-align: center;
+    }
+
+    .messages .post-message .message .image-field li .image-block {
+        width: 100px;
+    }
+
+    .messages .post-message .message .image-field li label input[type='file'] {
+        display: none;
+    }
+
+    .messages .post-message .message .image-field li label img {
+        display: block;
+        width: 100%;
+    }
+
+    .messages .post-message .message .image-field li label img {
+        display: block;
+        width: 100%;
+    }
+
+    .messages .post-message .message .image-field li label .img_delete {
+        position: absolute;
+        display: none;
+        top: -8px;
+        right: -8px;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        font-size: 14px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+    }
+
+.messages .post-message .message p.prohibited {
+    font-size: 12px;
+    color: #666;
+}
+
+.messages .post-message .message input[type='submit'] {
+    margin-top: 20px;
+    border-radius: 6px;
+    width: 100%;
+    padding: 8px 0;
+    color: white;
+    background-color: #20b5b4;
+}
+/*END Trade Page*/
+
 .content .list-account-content {
     margin-top: 70px;
     width: 100%;
@@ -655,32 +1011,6 @@ html {
 
 }
 
-.link-account-title {
-    text-decoration: none;
-    color: #000;
-    display: block;
-    font-size: 14px;
-    padding: 10px 0;
-}
-
-.link-account-title-cover {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.old-price {
-    text-decoration: line-through;
-    font-size: 14px;
-    margin-right: 8px;
-}
-
-.new-price {
-    color: red;
-    font-weight: 550;
-}
-
 .footer {
     width: 100%;
 }
@@ -695,10 +1025,6 @@ html {
 .footer .footer-road .info {
     display: flex;
     justify-content: space-between;
-}
-
-.info-sup {
-
 }
 
 .info .info-title {
