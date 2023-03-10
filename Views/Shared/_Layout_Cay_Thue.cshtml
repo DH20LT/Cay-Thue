@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="~/css/XemTatCaAccSmurf.css">
     <link rel="stylesheet" href="~/css/login-register.styles.css">
     <link rel="stylesheet" href="~/css/napthe.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    @* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> *@
 </head>
 <body>
 
@@ -53,7 +53,13 @@
                 <a class="dang-nhap nav-link" asp-controller="LienHe" asp-action="lienhe">LIÊN HỆ</a>
             </li>
             <li class="nav-item">
-                <a class="dang-nhap nav-link" asp-controller="LoginRegister" asp-action="index">ĐĂNG NHẬP</a>
+                <a class="dang-nhap nav-link" asp-controller="Account" asp-action="AccountList">MUA ACC</a>
+            </li>
+            <li class="nav-item">
+                <a class="dang-nhap nav-link" asp-controller="Account" asp-action="AccountCreate">Bán ACC</a>
+            </li>
+            <li class="nav-item">
+                <a class="dang-nhap nav-link" asp-controller="LoginRegister" asp-action="Login">ĐĂNG NHẬP</a>
             </li>
         </ul>
     </div>
@@ -61,7 +67,7 @@
 </nav>
 
 
-<div class="container">
+<div class="">
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
@@ -143,7 +149,7 @@
 <script src="~/assets/js/main.js"></script>
 
 <!--=============== MAIL ===============-->
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+@* <script src="https://smtpjs.com/v3/smtp.js"></script> *@
 
 @await RenderSectionAsync("Scripts", required: false)
 </body>

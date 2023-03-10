@@ -5,7 +5,7 @@ namespace CayThue.Controllers;
 public class LoginRegisterController : Controller
 {
     // GET
-    public IActionResult index()
+    public IActionResult Login()
     {
         return View();
     }

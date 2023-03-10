@@ -1,0 +1,95 @@
+@model IEnumerable<Account>
+
+@{
+    ViewBag.Title = "Account List";
+}
+
+<div class="main">
+    @foreach (var account in Model)
+    {
+        <!-- Bắt đầu Content -->
+        <div class="content-account-info-demo mt-3 mb-3">
+            <div
+                class="bg-white rounded p-3 w-100 m-md-3 m-0 mb-3 link-disable link-disable-color hvr-underline-from-center">
+                <a rel="nofollow" href="https://www.gamermarkt.com/seller-profile/WK419018813">
+                    <div class="d-inline-block d-md-flex justify-content-between w-100 mt-4 mt-md-0 p-2"
+                         style="background: #f8f9fa; border-radius: 7px;">
+                        <div class="">
+                            <p class="d-block d-md-inline-block font-weight-bold mb-0">Hüseyin Can T.</p>
+                            <p class="d-block d-md-inline-block mb-0">
+                                <i class="fas fa-circle text-success ml-2"></i>
+                                Online
+                            </p>
+                        </div>
+                        <div class="" style="min-width:200px">
+                            <div class="progress mt-1 asLink" data-toggle="tooltip" data-html="true" title=""
+                                 data-original-title="Warning: Any sales of this seller have not been evaluated yet.">
+                                <div class="progress-bar" style="width: 50%; background-color:#e07f00">50%</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a
+                    asp-action="AccountDetail" asp-route-Id="@account.Id">
+                    <div class="row m-2 m-md-0">
+                        <div class="col-md-2 justify-content-center text-center align-self-center">
+                            <img class="d-inline-block lazy loaded"
+                                 data-src="https://cdns.gamermarkt.com/files/images/lol_divisions/63.png" width="75"
+                                 height="75" alt="Diamond 1"
+                                 src="https://cdns.gamermarkt.com/files/images/lol_divisions/63.png"
+                                 data-was-processed="true"><br>
+                            <span class="size-5 text-muted text-center">
+                                Diamond 1
+                                <br><span class="badge badge-success">72% WR</span>
+                            </span>
+                        </div>
+                        <div class="col-md-10 list-spec align-middle">
+                            <div class="d-flex flex-column flex-md-row justify-content-between w-100">
+                                <div class="align-middle size-4 ">
+                                    EUW - 38 LEVEL
+                                </div>
+                                <div class="align-middle size-3 mt-2 order-first">
+                                    € @account.Price
+                                </div>
+                                <div class="align-middle size-4">
+                                    <img data-toggle="tooltip" data-placement="top" title="" alt="Blue Essence"
+                                         class="d-inline-block lazy loaded" width="30" height="30"
+                                         data-src="https://cdns.gamermarkt.com/files/images/lol/other/be_logo.png"
+                                         src="https://cdns.gamermarkt.com/files/images/lol/other/be_logo.png"
+                                         data-was-processed="true" data-original-title="Blue Essence"> 9.6 K
+                                    <img data-toggle="tooltip" data-placement="top" title="" alt="Riot Points"
+                                         class="d-inline-block lazy loaded" width="30" height="30"
+                                         data-src="https://cdns.gamermarkt.com/files/images/lol/other/rp_logo.png"
+                                         src="https://cdns.gamermarkt.com/files/images/lol/other/rp_logo.png"
+                                         data-was-processed="true" data-original-title="Riot Points"> 0 K
+                                </div>
+                            </div>
+                            <br>
+                            <div class="text-center m-r-2">
+                                <span class="size-5">
+                                    <li><i class="far fa-circle"></i> <b>24</b> Champions</li>
+                                    <li><i class="far fa-circle"></i> <b>3</b> Skins</li>
+                                    <li><i class="far fa-circle"></i> <b>0</b> Chroma </li><br>
+                                    <li><i class="far fa-circle"></i> <b>2</b> Ward Skins</li>
+                                    <li><i class="far fa-circle"></i> <b>48</b> Sum. Icons</li>
+                                    <li><i class="far fa-circle"></i> <b>5</b> Emotes</li><br>
+                                </span>
+                                <span class="size-5">
+                                    <li>
+                                        <i class="far fa-circle"></i> <b>Flex Division: Unranked</b>
+                                    </li>
+                                </span>
+                            </div>
+                            <div class="d-block d-md-none mt-2">
+                                <span class="btn btn-block btn-info">
+                                    <i class="fas fa-chevron-right"></i> View
+                                    Details
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+</div>

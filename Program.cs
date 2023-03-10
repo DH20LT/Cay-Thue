@@ -5,17 +5,19 @@ using CayThue.Models.Users;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("LocalDb");
+var connectionString = "Data Source=" +
+                       Path.Combine(Directory.GetCurrentDirectory(), "Data\\mydb.db");
 
 // Add services to the container.
 builder.Services.AddDbContext<CayThueDbContext>(optionsAction =>
-    optionsAction.UseSqlServer(connectionString)
+    optionsAction.UseSqlite(connectionString)
 );
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddViewLocalization();
 builder.Services.AddScoped<IAccountRep, AccountRep>();
 builder.Services.AddScoped<IUserRep, UserRep>();
+builder.Services.AddLocalization(options => options.ResourcesPath = "Translate");
 
 var app = builder.Build();
 
@@ -36,6 +38,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=AccountLOLInfo}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=AccountList}/{id?}");
 
 app.Run();
