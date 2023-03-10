@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 
 namespace CayThue.Controllers;
 
@@ -7,6 +8,13 @@ namespace CayThue.Controllers;
  */
 public class AccountController : Controller
 {
+    private readonly IStringLocalizer<AccountController> _localizer;
+    
+    public AccountController(IStringLocalizer<AccountController> localizer)
+    {
+        _localizer = localizer;
+    }
+    
     // GET
     public IActionResult AccountDetail()
     {
@@ -14,6 +22,12 @@ public class AccountController : Controller
     }
     
     public IActionResult AccountList()
+    {
+        return View();
+    }
+    
+    [HttpGet]
+    public IActionResult AccountCreate()
     {
         return View();
     }

@@ -42,9 +42,9 @@ public class CayThueDbContextFactory : IDesignTimeDbContextFactory<CayThueDbCont
             
         Console.WriteLine("Khởi Tạo CayThueDbContextFactory");
             
-        optionsBuilder.UseSqlServer(
-            "Server=(localdb)\\mssqllocaldb;Database=CayThueDB;" +
-            "Trusted_Connection=True;MultipleActiveResultSets=true"
+        optionsBuilder.UseSqlite(
+            "Data Source=" +
+            Path.Combine(Directory.GetCurrentDirectory(), "Data\\mydb.db")
         );
             
         return new CayThueDbContext(optionsBuilder.Options);

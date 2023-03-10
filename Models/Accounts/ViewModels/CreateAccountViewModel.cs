@@ -1,16 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿namespace CayThue.Models.Accounts.ViewModels;
 
-namespace CayThue.Models.Accounts;
-
-public class Account
+public class CreateAccountViewModel
 {
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    [Column("ID")]
     public Guid Id { get; set; }
     
-    [Column("GameID")]
     public Guid? GameId { get; set; }
     
     public float? Price { get; set; }
@@ -26,5 +19,4 @@ public class Account
     public bool? IsSold { get; set; }
     
     public DateTime? CreatedDate { get; set; }
-    
 }
