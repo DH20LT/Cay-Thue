@@ -10,6 +10,7 @@ public class Account
     [Column("ID")]
     public Guid Id { get; set; }
     
+    [Column("GameID")]
     public Guid? GameId { get; set; }
     
     public float? Price { get; set; }
