@@ -9,4 +9,6 @@ public interface IAccountRep
     IEnumerable<Account> GetAccountByDescription(string description);
     IEnumerable<Account> GetAccountByIsVerify(bool isVerify);
     IEnumerable<Account> GetAccountByCanChangeInfo(bool canChangeInfo);
+    
+    void AddAccount(Account account);
 }

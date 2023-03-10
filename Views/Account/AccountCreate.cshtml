@@ -14,20 +14,16 @@
     <div asp-validation-summary="All" class="text-danger"></div>
     
     <div class="form-group">
-        <label asp-for="GameId">@Localizer["Name:"]</label>
-        <input asp-for="GameId" type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+        <label asp-for="UserId">@Localizer["Name:"]</label>
+        <input asp-for="UserId" type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
     </div>
     <div class="form-group">
-        <label asp-for="Price">ShortDescription:</label>
-        <input asp-for="Price" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+        <label asp-for="Price">Price:</label>
+        <input asp-for="Price" type="number" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
     </div>
     <div class="form-group">
-        <label asp-for="Description">LongDescription: </label>
+        <label asp-for="Description">Description: </label>
         <input asp-for="Description" type="text" class="form-control" placeholder="PhotoPath">
-    </div>
-    <div class="form-group">
-        <label asp-for="Price">Price: </label>
-        <input asp-for="Price" type="number" class="form-control" placeholder="PhotoPath">
     </div>
 
     <div class="form-group p-5">
