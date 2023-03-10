@@ -8,7 +8,7 @@ namespace CayThue.Controllers;
 public class AccountController : Controller
 {
     // GET
-    public IActionResult Index()
+    public IActionResult AccountDetail()
     {
         return View();
     }
