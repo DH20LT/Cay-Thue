@@ -2,6 +2,9 @@
 
 namespace CayThue.Controllers;
 
+/*
+ * Manage Accounts to sell
+ */
 public class AccountController : Controller
 {
     // GET
