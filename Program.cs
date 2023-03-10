@@ -17,6 +17,7 @@ builder.Services.AddDbContext<CayThueDbContext>(optionsAction =>
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IAccountRep, AccountRep>();
 builder.Services.AddScoped<IUserRep, UserRep>();
+builder.Services.AddLocalization(options => options.ResourcesPath = "Translate");
 
 var app = builder.Build();
 
@@ -37,6 +38,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Account}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=AccountList}/{id?}");
 
 app.Run();

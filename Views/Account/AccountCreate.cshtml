@@ -1,14 +1,36 @@
-﻿@model TModel
+﻿@model CreateAccountViewModel
 
-<!DOCTYPE html>
+@using Microsoft.AspNetCore.Mvc.Localization
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+@inject IViewLocalizer Localizer
+
+@{
+    ViewBag.Title = "Create Account to Sold";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form asp-action="AccountCreate" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    
+    <div class="form-group">
+        <label asp-for="GameId">@Localizer["Name:"]</label>
+        <input asp-for="GameId" type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">ShortDescription:</label>
+        <input asp-for="Price" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">LongDescription: </label>
+        <input asp-for="Description" type="text" class="form-control" placeholder="PhotoPath">
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Price: </label>
+        <input asp-for="Price" type="number" class="form-control" placeholder="PhotoPath">
+    </div>
+
+    <div class="form-group p-5">
+        <button type="submit" class="btn btn-primary">Create Account</button>
+    </div>
+</form>

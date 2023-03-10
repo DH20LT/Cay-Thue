@@ -36,4 +36,19 @@
     <Folder Include="Migrations" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="Translate\vi.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>vi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Translate\vi.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>vi.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>
