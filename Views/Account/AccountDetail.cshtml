@@ -1,4 +1,7 @@
-﻿<div class="main">
+﻿@using Microsoft.EntityFrameworkCore.Infrastructure
+@model Account
+
+<div class="main">
 <!-- Bắt đầu Content -->
 <div class="content mt-3 mb-3">
 <div class="header-title px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center mb-0">
@@ -28,7 +31,7 @@
             </div>
         </div>
         <div class="col-12 col-md-4 m-auto text-center py-2" style="border-left:rgba(26, 84, 103, 0.2) 1px solid;">
-            <span class="size-1 m-md-5">€ 95.20</span><br>
+            <span class="size-1 m-md-5" id="span-price">€ @Model.Price</span><br>
         </div>
         <div class="col-12 col-md-4">
             <button type="button" class="btn btn-primary btn-lg btn-block h-100 w-100" id="purchase_button" name="purchase_button" data-product-type="ilan" data-product-id="557470" data-price="95.20"><i class="fas fa-shopping-cart"></i> Buy Now</button>
