@@ -24,9 +24,10 @@ public class AccountController : Controller
     }
     
     // GET
-    public IActionResult AccountDetail()
+    public IActionResult AccountDetail(Guid Id)
     {
-        return View();
+        Account account = _accountRep.GetAccountById(Id);
+        return View(account);
     }
     
     public IActionResult AccountList()

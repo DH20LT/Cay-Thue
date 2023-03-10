@@ -8,13 +8,24 @@ public class AccountRep : IAccountRep
     {
         _cayThueDbContext = cayThueDbContext;
     }
-    
+
+    public Account GetAccountById(Guid id)
+    {
+        Account account = _cayThueDbContext.Accounts.Find(id);
+        return account;
+    }
+
     public IEnumerable<Account> GetAllAccounts()
     {
         return _cayThueDbContext.Accounts;
     }
 
-    public Account GetAccountById(string id)
+    public IEnumerable<Account> GetAccountsByUserId(string userId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Account GetAccountsById(string id)
     {
         Account account = _cayThueDbContext.Accounts.Find(id) ?? throw new InvalidOperationException
         {
@@ -25,27 +36,27 @@ public class AccountRep : IAccountRep
         return account;
     }
 
-    public IEnumerable<Account> GetAccountByGameId(string gameId)
+    public IEnumerable<Account> GetAccountsByGameId(string gameId)
     {
         return _cayThueDbContext.Accounts;
     }
 
-    public IEnumerable<Account> GetAccountByPrice(float startPrice, float endPrice)
+    public IEnumerable<Account> GetAccountsByPrice(float startPrice, float endPrice)
     {
         throw new NotImplementedException();
     }
 
-    public IEnumerable<Account> GetAccountByDescription(string description)
+    public IEnumerable<Account> GetAccountsByDescription(string description)
     {
         throw new NotImplementedException();
     }
 
-    public IEnumerable<Account> GetAccountByIsVerify(bool isVerify)
+    public IEnumerable<Account> GetAccountsByIsVerify(bool isVerify)
     {
         throw new NotImplementedException();
     }
 
-    public IEnumerable<Account> GetAccountByCanChangeInfo(bool canChangeInfo)
+    public IEnumerable<Account> GetAccountsByCanChangeInfo(bool canChangeInfo)
     {
         throw new NotImplementedException();
     }
