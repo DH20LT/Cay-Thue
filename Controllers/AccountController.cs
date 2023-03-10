@@ -31,7 +31,8 @@ public class AccountController : Controller
     
     public IActionResult AccountList()
     {
-        return View();
+        IEnumerable<Account> accounts = _accountRep.GetAllAccounts();
+        return View(accounts);
     }
     
     [HttpGet]
