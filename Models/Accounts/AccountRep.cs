@@ -49,4 +49,10 @@ public class AccountRep : IAccountRep
     {
         throw new NotImplementedException();
     }
+
+    public void AddAccount(Account account)
+    {
+        _cayThueDbContext.Accounts.Add(account);
+        _cayThueDbContext.SaveChanges();
+    }
 }
