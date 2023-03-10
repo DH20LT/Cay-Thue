@@ -14,7 +14,7 @@ builder.Services.AddDbContext<CayThueDbContext>(optionsAction =>
 );
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddViewLocalization();
 builder.Services.AddScoped<IAccountRep, AccountRep>();
 builder.Services.AddScoped<IUserRep, UserRep>();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Translate");
