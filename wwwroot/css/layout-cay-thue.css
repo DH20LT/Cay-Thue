@@ -583,7 +583,7 @@ i.fab, i.far, i.fas {
     padding-top: 16px;
 }
 
-.content {
+.content-trade {
     width: 680px;
     margin: 16px auto;
     padding: 16px 0;
@@ -622,11 +622,11 @@ i.fab, i.far, i.fas {
     margin-left: 20px;
 }
 
-.content h2 {
+.content-trade h2 {
     font-size: 16px;
 }
 
-    .content h2 span {
+    .content-trade h2 span {
         font-weight: normal;
         font-size: 14px;
     }
@@ -703,7 +703,7 @@ i.fab, i.far, i.fas {
     background-color: white;
 }
 
-.content h3 {
+.content-trade h3 {
     font-size: 20px;
     text-align: center;
 }
