@@ -1,4 +1,4 @@
-﻿namespace CayThue.Models.AccountLolInfo;
+﻿namespace CayThue.Models.AccountLolInfos;
 
 public class AccountLolInfoRep : IAccountLolInfoRep
 {
@@ -16,7 +16,10 @@ public class AccountLolInfoRep : IAccountLolInfoRep
 
     public AccountLolInfo GetAccountLolInfoByAccountId(string accountId)
     {
-        throw new NotImplementedException();
+        AccountLolInfo accountLolInfo = _cayThueDbContext.AccountLolInfos.FirstOrDefault(
+            a => a.AccountId == accountId
+            );
+        return accountLolInfo;
     }
 
     public IEnumerable<AccountLolInfo> GetAllAccountLolInfos()

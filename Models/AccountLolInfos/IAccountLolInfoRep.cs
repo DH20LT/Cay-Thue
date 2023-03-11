@@ -1,4 +1,4 @@
-﻿namespace CayThue.Models.AccountLolInfo;
+﻿namespace CayThue.Models.AccountLolInfos;
 
 public interface IAccountLolInfoRep
 {

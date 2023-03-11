@@ -1,4 +1,4 @@
-﻿namespace CayThue.Models.AccountLolInfo;
+﻿namespace CayThue.Models.AccountLolInfos;
 
 public class AccountLolInfo
 {
