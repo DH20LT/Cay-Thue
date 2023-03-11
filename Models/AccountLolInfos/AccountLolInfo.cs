@@ -11,7 +11,6 @@ public class AccountLolInfo
     public Guid? AccountId { get; set; }
     public string? AvailableRiotPoints { get; set; }
     public string? Level { get; set; }
-    public string? ProfileBanner { get; set; }
     public string? Honor { get; set; }
     public string? Server { get; set; }
     public string? Champions { get; set; }
