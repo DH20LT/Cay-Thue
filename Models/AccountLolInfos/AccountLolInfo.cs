@@ -1,9 +1,14 @@
-﻿namespace CayThue.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace CayThue.Models.AccountLolInfos;
 
 public class AccountLolInfo
 {
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public string? Id { get; set; }
-    public string? AccountId { get; set; }
+    public Guid? AccountId { get; set; }
     public string? AvailableRiotPoints { get; set; }
     public string? Level { get; set; }
     public string? ProfileBanner { get; set; }
