@@ -1,6 +1,7 @@
 using CayThue.Models;
 using Microsoft.EntityFrameworkCore;
 using CayThue.Models.Accounts;
+using CayThue.Models.AccountLolInfos;
 using CayThue.Models.Users;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,8 +16,11 @@ builder.Services.AddDbContext<CayThueDbContext>(optionsAction =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddViewLocalization();
+
 builder.Services.AddScoped<IAccountRep, AccountRep>();
 builder.Services.AddScoped<IUserRep, UserRep>();
+builder.Services.AddScoped<IAccountLolInfoRep, AccountLolInfoRep>();
+
 builder.Services.AddLocalization(options => options.ResourcesPath = "Translate");
 
 var app = builder.Build();

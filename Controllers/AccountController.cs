@@ -32,24 +32,26 @@ public class AccountController : Controller
     public IActionResult AccountDetail(Guid Id)
     {
         Account account = _accountRep.GetAccountById(Id);
+        
         AccountLolInfo accountLolInfo = _accountLolInfoRep.GetAccountLolInfoByAccountId(account.Id);
+
         DetailAccountViewModel detailAccountViewModel = new DetailAccountViewModel()
         {
             Id = "123",
-            AccountId = account.Id,
-            Price = account.Price,
-            AvailableRiotPoints = accountLolInfo.AvailableRiotPoints,
-            Level = accountLolInfo.Level,
-            ProfileBanner = accountLolInfo.ProfileBanner,
-            Honor = accountLolInfo.Honor,
-            Server = accountLolInfo.Server,
-            Champions = accountLolInfo.Champions,
-            Skins = accountLolInfo.Skins,
-            Chroma = accountLolInfo.Chroma,
-            WardSkins = accountLolInfo.WardSkins,
-            SumIcons = accountLolInfo.SumIcons,
-            Emotes = accountLolInfo.Emotes,
-            FlexDivision = accountLolInfo.FlexDivision
+            AccountId = Guid.NewGuid(),
+            Price = account?.Price ?? 0,
+            AvailableRiotPoints = accountLolInfo?.AvailableRiotPoints ?? "0",
+            Level = accountLolInfo?.Level ?? "0",
+            ProfileBanner = accountLolInfo?.ProfileBanner ?? "0",
+            Honor = accountLolInfo?.Honor ?? "0",
+            Server = accountLolInfo?.Server ?? "0",
+            Champions = accountLolInfo?.Champions ?? "0",
+            Skins = accountLolInfo?.Skins ?? "0",
+            Chroma = accountLolInfo?.Chroma ?? "0",
+            WardSkins = accountLolInfo?.WardSkins ?? "0",
+            SumIcons = accountLolInfo?.SumIcons ?? "0",
+            Emotes = accountLolInfo?.Emotes ?? "0",
+            FlexDivision = accountLolInfo?.FlexDivision ?? "0"
         };
         return View(detailAccountViewModel);
     }
