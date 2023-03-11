@@ -51,7 +51,7 @@ public class AccountController : Controller
             Emotes = accountLolInfo.Emotes,
             FlexDivision = accountLolInfo.FlexDivision
         };
-        return View(account);
+        return View(detailAccountViewModel);
     }
 
     public IActionResult AccountList()
