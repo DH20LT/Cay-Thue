@@ -1,9 +1,11 @@
-﻿namespace CayThue.Models.AccountLolInfos;
+﻿namespace CayThue.Models.Accounts.ViewModels;
 
-public class AccountLolInfo
+// Get data from AccountLolInfo.cs
+public class DetailAccountViewModel
 {
     public string? Id { get; set; }
     public Guid? AccountId { get; set; }
+    public float? Price { get; set; } 
     public string? AvailableRiotPoints { get; set; }
     public string? Level { get; set; }
     public string? ProfileBanner { get; set; }

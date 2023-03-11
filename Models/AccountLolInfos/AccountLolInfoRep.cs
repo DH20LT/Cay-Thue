@@ -14,7 +14,7 @@ public class AccountLolInfoRep : IAccountLolInfoRep
         throw new NotImplementedException();
     }
 
-    public AccountLolInfo GetAccountLolInfoByAccountId(string accountId)
+    public AccountLolInfo GetAccountLolInfoByAccountId(Guid accountId)
     {
         AccountLolInfo accountLolInfo = _cayThueDbContext.AccountLolInfos.FirstOrDefault(
             a => a.AccountId == accountId

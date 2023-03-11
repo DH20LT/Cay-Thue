@@ -4,7 +4,7 @@ public interface IAccountLolInfoRep
 {
     AccountLolInfo GetAccountLolInfoById(string id);
     
-    AccountLolInfo GetAccountLolInfoByAccountId(string accountId);
+    AccountLolInfo GetAccountLolInfoByAccountId(Guid accountId);
     
     IEnumerable<AccountLolInfo> GetAllAccountLolInfos();
 }
