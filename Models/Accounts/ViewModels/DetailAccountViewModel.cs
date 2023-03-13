@@ -26,5 +26,5 @@ public class DetailAccountViewModel
     public int? Prestige { get; set; }
     public string? OfflineTime { get; set; }
     public string? DateUpdateAccount { get; set; }
-    public string? Views { get; set; }
+    public int? Views { get; set; }
 }

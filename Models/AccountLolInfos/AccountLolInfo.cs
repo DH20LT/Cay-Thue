@@ -38,6 +38,18 @@ public class AccountLolInfo
     public string? PrevSeasonSoloDuo  { get; set; }
     
     public string? PrevSeasonFlex { get; set; }
+    
+    public int? AvailableBlueEssence { get; set; }
+    
+    public string? FirstServerOfAccount { get; set; }
+    
+    public int? AccountCreatedAt { get; set; }
+    
+    public int? Prestige { get; set; }
+    
+    public DateTime? OffineTime { get; set; }
+    
+    public DateTime? DateUpdateAccount { get; set; }
 
     public string? toString()
     {
