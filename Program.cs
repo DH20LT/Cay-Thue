@@ -7,7 +7,7 @@ using CayThue.Models.Users;
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = "Data Source=" +
-                       Path.Combine(Directory.GetCurrentDirectory(), "Data\\mydb.db");
+                       Path.Combine(Directory.GetCurrentDirectory(), "mydb.db");
 
 // Add services to the container.
 builder.Services.AddDbContext<CayThueDbContext>(optionsAction =>

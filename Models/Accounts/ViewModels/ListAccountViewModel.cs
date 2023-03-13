@@ -3,6 +3,7 @@
 // Get data from AccountLolInfo.cs
 public class ListAccountViewModel
 {
+    public Guid Id { get; set; } // Id give to view AccountDetail
     public Guid AccountId { get; set; }
     public string? UserName { get; set; } //tên của người dùng.
     public float? Price { get; set; }
