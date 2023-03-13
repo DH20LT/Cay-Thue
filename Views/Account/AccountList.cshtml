@@ -1,4 +1,5 @@
 @model IEnumerable<ListAccountViewModel>
+
 @{
     ViewBag.Title = "Account List";
 }
@@ -14,7 +15,7 @@
                     <div class="d-inline-block d-md-flex justify-content-between w-100 mt-4 mt-md-0 p-2"
                          style="background: #f8f9fa; border-radius: 7px;">
                         <div class="">
-                            <p class="d-block d-md-inline-block font-weight-bold mb-0">@Model.UserName</p>
+                            <p class="d-block d-md-inline-block font-weight-bold mb-0">@account.UserName</p>
                             <p class="d-block d-md-inline-block mb-0">
                                 <i class="fas fa-circle text-success ml-2"></i>
                                 Online
@@ -23,13 +24,13 @@
                         <div class="" style="min-width:200px">
                             <div class="progress mt-1 asLink" data-toggle="tooltip" data-html="true" title=""
                                  data-original-title="Warning: Any sales of this seller have not been evaluated yet.">
-                                <div class="progress-bar" style="width: 50%; background-color:#e07f00">@Model.Prestige%</div>
+                                <div class="progress-bar" style="width: 50%; background-color:#e07f00">@account.Prestige%</div>
                             </div>
                         </div>
                     </div>
                 </a>
                 <a
-                    asp-action="AccountDetail" asp-route-Id="@account.Id">
+                    asp-action="AccountDetail" asp-route-Id="@account.AccountId">
                     <div class="row m-2 m-md-0">
                         <div class="col-md-2 justify-content-center text-center align-self-center">
                             <img class="d-inline-block lazy loaded"
@@ -39,43 +40,43 @@
                                  data-was-processed="true"><br>
                             <span class="size-5 text-muted text-center">
                                 Diamond 1
-                                <br><span class="badge badge-success">@Model.WinRate% WR</span>
+                                <br><span class="badge badge-success">@account.WinRate% WR</span>
                             </span>
                         </div>
                         <div class="col-md-10 list-spec align-middle">
                             <div class="d-flex flex-column flex-md-row justify-content-between w-100">
                                 <div class="align-middle size-4 ">
-                                    @Model.Server - @Model.Level LEVEL
+                                    @account.Server - @account.Level LEVEL
                                 </div>
                                 <div class="align-middle size-3 mt-2 order-first">
-                                    € @Model.Price
+                                    € @account.Price
                                 </div>
                                 <div class="align-middle size-4">
                                     <img data-toggle="tooltip" data-placement="top" title="" alt="Blue Essence"
                                          class="d-inline-block lazy loaded" width="30" height="30"
                                          data-src="https://cdns.gamermarkt.com/files/images/lol/other/be_logo.png"
                                          src="https://cdns.gamermarkt.com/files/images/lol/other/be_logo.png"
-                                         data-was-processed="true" data-original-title="Blue Essence"> @Model.AvailableBlueEssence K
+                                         data-was-processed="true" data-original-title="Blue Essence"> @account.AvailableBlueEssence K
                                     <img data-toggle="tooltip" data-placement="top" title="" alt="Riot Points"
                                          class="d-inline-block lazy loaded" width="30" height="30"
                                          data-src="https://cdns.gamermarkt.com/files/images/lol/other/rp_logo.png"
                                          src="https://cdns.gamermarkt.com/files/images/lol/other/rp_logo.png"
-                                         data-was-processed="true" data-original-title="Riot Points"> @Model.AvailableRiotPoints K
+                                         data-was-processed="true" data-original-title="Riot Points"> @account.AvailableRiotPoints K
                                 </div>
                             </div>
                             <br>
                             <div class="text-center m-r-2">
                                 <span class="size-5">
-                                    <li><i class="far fa-circle"></i> <b>@Model.Champions</b> Champions</li>
-                                    <li><i class="far fa-circle"></i> <b>@Model.Skins</b> Skins</li>
-                                    <li><i class="far fa-circle"></i> <b>@Model.Chromas</b> Chroma </li><br>
-                                    <li><i class="far fa-circle"></i> <b>@Model.WardSkins</b> Ward Skins</li>
-                                    <li><i class="far fa-circle"></i> <b>@Model.SumIcons</b> Sum. Icons</li>
-                                    <li><i class="far fa-circle"></i> <b>@Model.Emotes</b> Emotes</li><br>
+                                    <li><i class="far fa-circle"></i> <b>@account.Champions</b> Champions</li>
+                                    <li><i class="far fa-circle"></i> <b>@account.Skins</b> Skins</li>
+                                    <li><i class="far fa-circle"></i> <b>@account.Chromas</b> Chroma </li><br>
+                                    <li><i class="far fa-circle"></i> <b>@account.WardSkins</b> Ward Skins</li>
+                                    <li><i class="far fa-circle"></i> <b>@account.SumIcons</b> Sum. Icons</li>
+                                    <li><i class="far fa-circle"></i> <b>@account.Emotes</b> Emotes</li><br>
                                 </span>
                                 <span class="size-5">
                                     <li>
-                                        <i class="far fa-circle"></i> <b>Flex Division: @Model.RankFlex</b>
+                                        <i class="far fa-circle"></i> <b>Flex Division: @account.RankFlex</b>
                                     </li>
                                 </span>
                             </div>

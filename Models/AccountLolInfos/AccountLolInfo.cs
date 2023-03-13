@@ -8,6 +8,7 @@ public class AccountLolInfo
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public string? Id { get; set; }
+
     public Guid? AccountId { get; set; }
     public string? AvailableRiotPoints { get; set; }
     public string? Level { get; set; }
@@ -19,5 +20,13 @@ public class AccountLolInfo
     public string? WardSkins { get; set; }
     public string? SumIcons { get; set; }
     public string? Emotes { get; set; }
+
     public string? FlexDivision { get; set; }
+
+    public string? toString()
+    {
+        return "AccountLolInfo: " + Id + " " + AccountId + " " + AvailableRiotPoints + " " + Level + " " + Honor + " " +
+               Server + " " + Champions + " " + Skins + " " + Chroma + " " + WardSkins + " " + SumIcons + " " + Emotes +
+               " " + FlexDivision;
+    }
 }

@@ -47,7 +47,7 @@ public class CayThueDbContextFactory : IDesignTimeDbContextFactory<CayThueDbCont
             
         optionsBuilder.UseSqlite(
             "Data Source=" +
-            Path.Combine(Directory.GetCurrentDirectory(), "Data\\mydb.db")
+            Path.Combine(Directory.GetCurrentDirectory(), "mydb.db")
         );
             
         return new CayThueDbContext(optionsBuilder.Options);

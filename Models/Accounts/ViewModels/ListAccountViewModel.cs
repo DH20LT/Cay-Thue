@@ -3,7 +3,7 @@
 // Get data from AccountLolInfo.cs
 public class ListAccountViewModel
 {
-    public Guid AccountId { get; set; }
+    public Guid AccountId { get; set; } // Id give to view AccountDetail
     public string? UserName { get; set; } //tên của người dùng.
     public float? Price { get; set; }
     public string? AvailableRiotPoints { get; set; }
@@ -21,4 +21,12 @@ public class ListAccountViewModel
     public int? Prestige { get; set; }
     public string? OfflineTime { get; set; }
     public string? WinRate { get; set; }
+
+    public string? toString()
+    {
+        return "ListAccountViewModel: " + AccountId + " " + UserName + " " + Price + " " + AvailableRiotPoints + " " +
+               Server + " " + Level + " " + AvailableBlueEssence + " " + RankFlex + " " + RankSoloDuo + " " +
+               Champions + " " + Skins + " " + Chromas + " " + WardSkins + " " + SumIcons + " " + Emotes + " " +
+               Prestige + " " + OfflineTime + " " + WinRate;
+    }
 }
