@@ -11,7 +11,7 @@ public class AccountLolInfoRep : IAccountLolInfoRep
     
     public AccountLolInfo GetAccountLolInfoById(string id)
     {
-        throw new NotImplementedException();
+        return _cayThueDbContext.AccountLolInfos.Find(id);
     }
 
     public AccountLolInfo GetAccountLolInfoByAccountId(Guid accountId)
@@ -24,6 +24,6 @@ public class AccountLolInfoRep : IAccountLolInfoRep
 
     public IEnumerable<AccountLolInfo> GetAllAccountLolInfos()
     {
-        throw new NotImplementedException();
+        return _cayThueDbContext.AccountLolInfos;
     }
 }

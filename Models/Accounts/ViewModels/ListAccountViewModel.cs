@@ -21,4 +21,12 @@ public class ListAccountViewModel
     public int? Prestige { get; set; }
     public string? OfflineTime { get; set; }
     public string? WinRate { get; set; }
+
+    public string? toString()
+    {
+        return "ListAccountViewModel: " + AccountId + " " + UserName + " " + Price + " " + AvailableRiotPoints + " " +
+               Server + " " + Level + " " + AvailableBlueEssence + " " + RankFlex + " " + RankSoloDuo + " " +
+               Champions + " " + Skins + " " + Chromas + " " + WardSkins + " " + SumIcons + " " + Emotes + " " +
+               Prestige + " " + OfflineTime + " " + WinRate;
+    }
 }

@@ -16,16 +16,20 @@ public class AccountController : Controller
     private readonly IAccountRep _accountRep;
 
     private readonly IAccountLolInfoRep _accountLolInfoRep;
+    
+    private readonly ILogger<AccountController> _logger;
 
     public AccountController(
         IStringLocalizer<AccountController> localizer,
         IAccountRep accountRep,
-        IAccountLolInfoRep accountLolInfoRep
+        IAccountLolInfoRep accountLolInfoRep,
+        ILogger<AccountController> logger
     )
     {
         _localizer = localizer;
         _accountRep = accountRep;
         _accountLolInfoRep = accountLolInfoRep;
+        _logger = logger;
     }
 
     // GET
@@ -54,11 +58,44 @@ public class AccountController : Controller
 
     public IActionResult AccountList()
     {
-        List<Account> accountList = _accountRep.GetAccountList();
-
-        List<AccountViewModel> accountViewModelList = new ArrayList<AccountViewModel>();
+        IEnumerable<Account> accountList = _accountRep.GetAllAccounts();
         
-        return View(accounts);
+        accountList.ToList().ForEach(account => _logger.LogInformation("Account: {0}", account.toString()));
+        
+        accountList.
+        
+
+        IEnumerable<AccountLolInfo> accountLolInfoList = _accountLolInfoRep.GetAllAccountLolInfos();
+        
+        accountLolInfoList.ToList().ForEach(accountLolInfo => _logger.LogInformation("AccountLolInfo: {0}", accountLolInfo.toString()));
+        
+        
+        
+        
+        IEnumerable<ListAccountViewModel> accountViewModelList;
+        
+        accountViewModelList = accountList.Join(
+            accountLolInfoList,
+            account => account.Id,
+            accountLolInfo => accountLolInfo.AccountId,
+            (account, accountLolInfo) => new ListAccountViewModel()
+            {
+                AccountId = account.Id,
+                Price = account.Price,
+                AvailableRiotPoints = accountLolInfo.AvailableRiotPoints,
+                Level = accountLolInfo.Level,
+                Champions = accountLolInfo.Champions,
+                Skins = accountLolInfo.Skins,
+                Chromas = accountLolInfo.Chroma,
+                WardSkins = accountLolInfo.WardSkins,
+                SumIcons = accountLolInfo.SumIcons,
+                Emotes = accountLolInfo.Emotes,
+            }
+        );
+
+        accountViewModelList.ToList().ForEach(accountViewModelList => _logger.LogInformation("ListAccountViewModel: {0}", accountViewModelList.toString()));
+        
+        return View(accountViewModelList);
     }
 
     [HttpGet]
@@ -110,7 +147,7 @@ public class AccountController : Controller
                 CanChangeInfo = account.CanChangeInfo,
                 IsSold = account.IsSold,
                 CreatedDate = account.CreatedDate,
-                AccountLolInfo = accountLolInfo
+                // AccountLolInfo = accountLolInfo
             }
         );
         
