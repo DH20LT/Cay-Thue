@@ -62,14 +62,11 @@ public class AccountController : Controller
         
         accountList.ToList().ForEach(account => _logger.LogInformation("Account: {0}", account.toString()));
         
-        accountList.
         
 
         IEnumerable<AccountLolInfo> accountLolInfoList = _accountLolInfoRep.GetAllAccountLolInfos();
         
         accountLolInfoList.ToList().ForEach(accountLolInfo => _logger.LogInformation("AccountLolInfo: {0}", accountLolInfo.toString()));
-        
-        
         
         
         IEnumerable<ListAccountViewModel> accountViewModelList;
@@ -82,8 +79,8 @@ public class AccountController : Controller
             {
                 AccountId = account.Id,
                 Price = account.Price,
-                AvailableRiotPoints = accountLolInfo.AvailableRiotPoints,
-                Level = accountLolInfo.Level,
+                AvailableRiotPoints = accountLolInfo.AvailableRiotPoints ?? "0",
+                Level = accountLolInfo.Level ?? "0",
                 Champions = accountLolInfo.Champions,
                 Skins = accountLolInfo.Skins,
                 Chromas = accountLolInfo.Chroma,
@@ -122,6 +119,22 @@ public class AccountController : Controller
                 CreatedDate = DateTime.Now
             };
             _accountRep.AddAccount(account);
+            
+            AccountLolInfo accountLolInfo = new AccountLolInfo()
+            {
+                AccountId = account.Id,
+                AvailableRiotPoints = "0",
+                Level = "0",
+                Honor = "0",
+                Champions = "0",
+                Skins = "0",
+                Chroma = "0",
+                WardSkins = "0",
+                SumIcons = "0",
+                Emotes = "0"
+            };
+            _accountLolInfoRep.Add(accountLolInfo);
+            
             return RedirectToAction("AccountList");
         }
 
