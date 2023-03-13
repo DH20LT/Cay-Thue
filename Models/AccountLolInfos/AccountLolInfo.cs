@@ -21,12 +21,12 @@ public class AccountLolInfo
     public string? SumIcons { get; set; }
     public string? Emotes { get; set; }
 
-    public string? FlexDivision { get; set; }
+    public string? RankFlex { get; set; }
 
     public string? toString()
     {
         return "AccountLolInfo: " + Id + " " + AccountId + " " + AvailableRiotPoints + " " + Level + " " + Honor + " " +
                Server + " " + Champions + " " + Skins + " " + Chroma + " " + WardSkins + " " + SumIcons + " " + Emotes +
-               " " + FlexDivision;
+               " " + RankFlex;
     }
 }
