@@ -52,7 +52,16 @@ public class AccountController : Controller
             WardSkins = accountLolInfo?.WardSkins ?? "0",
             SumIcons = accountLolInfo?.SumIcons ?? "0",
             Emotes = accountLolInfo?.Emotes ?? "0",
+            RankFlex = accountLolInfo?.RankFlex ?? "0",
+            RankSoloDuo = accountLolInfo?.RankSoloDuo ?? "0",
+            PrevSeasonSoloDuo = accountLolInfo?.PrevSeasonSoloDuo ?? "0",
+            PrevSeasonFlex = accountLolInfo?.PrevSeasonFlex ?? "0",
+            Server = accountLolInfo?.Server ?? "0",
+            Views = account?.Views ?? 0
         };
+
+        _accountRep.IncreaseViews(Id);
+        
         return View(detailAccountViewModel);
     }
 

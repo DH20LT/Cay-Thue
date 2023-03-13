@@ -3,6 +3,7 @@ using System;
 using CayThue.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CayThue.Migrations
 {
     [DbContext(typeof(CayThueDbContext))]
-    partial class CayThueDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230313144438_FieldViews")]
+    partial class FieldViews
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.3");
@@ -23,14 +26,8 @@ namespace CayThue.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("AccountCreatedAt")
-                        .HasColumnType("INTEGER");
-
                     b.Property<Guid?>("AccountId")
                         .HasColumnType("TEXT");
-
-                    b.Property<int?>("AvailableBlueEssence")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("AvailableRiotPoints")
                         .HasColumnType("TEXT");
@@ -41,13 +38,7 @@ namespace CayThue.Migrations
                     b.Property<string>("Chroma")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("DateUpdateAccount")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Emotes")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FirstServerOfAccount")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Honor")
@@ -55,12 +46,6 @@ namespace CayThue.Migrations
 
                     b.Property<string>("Level")
                         .HasColumnType("TEXT");
-
-                    b.Property<DateTime?>("OffineTime")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("Prestige")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("PrevSeasonFlex")
                         .HasColumnType("TEXT");

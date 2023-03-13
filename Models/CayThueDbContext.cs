@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using CayThue.Models.Library;
 using CayThue.Models.Accounts;
 using CayThue.Models.AccountLolInfos;
 using CayThue.Models.Users;
@@ -22,7 +23,7 @@ public class CayThueDbContext : DbContext
     {
         //use this to configure the model
     }
-
+    
     public DbSet<Account> Accounts { get; set; }
     
     public DbSet<AccountLolInfo> AccountLolInfos { get; set; }
@@ -34,6 +35,8 @@ public class CayThueDbContext : DbContext
     public DbSet<Payment> PaymentHistory { get; set; }
     
     public DbSet<Trade> TradeHistory { get; set; }
+    
+    public DbSet<Rank> Ranks { get; set; }
 
 }
 

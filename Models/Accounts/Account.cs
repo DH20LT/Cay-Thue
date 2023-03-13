@@ -25,6 +25,8 @@ public class Account
     public bool? IsSold { get; set; }
 
     public DateTime? CreatedDate { get; set; }
+    
+    public int? Views { get; set; }
 
     public string? toString()
     {
