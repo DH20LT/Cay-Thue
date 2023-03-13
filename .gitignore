@@ -38,3 +38,5 @@ msbuild.wrn
 Data/mydb.db-shm
 
 Data/mydb.db-wal
+/mydb.db-shm
+/mydb.db-wal
