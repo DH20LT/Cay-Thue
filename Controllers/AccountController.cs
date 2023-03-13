@@ -54,7 +54,10 @@ public class AccountController : Controller
 
     public IActionResult AccountList()
     {
-        IEnumerable<Account> accounts = _accountRep.GetAllAccounts();
+        List<Account> accountList = _accountRep.GetAccountList();
+
+        List<AccountViewModel> accountViewModelList = new ArrayList<AccountViewModel>();
+        
         return View(accounts);
     }
 
@@ -86,5 +89,31 @@ public class AccountController : Controller
         }
 
         return View();
+    }
+
+    IEnumerable<Account> GetAllAccountsWithLolInfo() {
+        IEnumerable<Account> accounts = _accountRep.GetAllAccounts();
+        IEnumerable<AccountLolInfo> accountLolInfos = _accountLolInfoRep.GetAllAccountLolInfos();
+
+        IEnumerable<Account> accountsWithLolInfo = accounts.Join(
+            accountLolInfos,
+            account => account.Id,
+            accountLolInfo => accountLolInfo.AccountId,
+            (account, accountLolInfo) => new Account()
+            {
+                Id = account.Id,
+                GameId = account.GameId,
+                Price = account.Price,
+                Description = account.Description,
+                UserId = account.UserId,
+                IsVerify = account.IsVerify,
+                CanChangeInfo = account.CanChangeInfo,
+                IsSold = account.IsSold,
+                CreatedDate = account.CreatedDate,
+                AccountLolInfo = accountLolInfo
+            }
+        );
+        
+        return accountsWithLolInfo;
     }
 }

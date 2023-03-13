@@ -61,6 +61,10 @@ public class AccountRep : IAccountRep
         throw new NotImplementedException();
     }
 
+    IEnumerable<Account> GetAllAccountsWithLolInfo() {
+        // Step 1: Get All Account
+    }
+
     public void AddAccount(Account account)
     {
         _cayThueDbContext.Accounts.Add(account);
