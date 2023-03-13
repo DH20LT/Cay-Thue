@@ -12,4 +12,6 @@ public interface IAccountRep
     IEnumerable<Account> GetAccountsByCanChangeInfo(bool canChangeInfo);
 
     void AddAccount(Account account);
+    
+    void IncreaseViews(Guid id);
 }

@@ -53,6 +53,9 @@ public class AccountController : Controller
             SumIcons = accountLolInfo?.SumIcons ?? "0",
             Emotes = accountLolInfo?.Emotes ?? "0",
         };
+
+        _accountRep.IncreaseViews(Id);
+        
         return View(detailAccountViewModel);
     }
 

@@ -66,4 +66,11 @@ public class AccountRep : IAccountRep
         _cayThueDbContext.Accounts.Add(account);
         _cayThueDbContext.SaveChanges();
     }
+
+    public void IncreaseViews(Guid id)
+    {
+        Account account = _cayThueDbContext.Accounts.Find(id);
+        account.Views += 1;
+        _cayThueDbContext.SaveChanges();
+    }
 }
