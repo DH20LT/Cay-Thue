@@ -1,7 +1,7 @@
 ﻿namespace CayThue.Models.Accounts.ViewModels;
 
 // Get data from AccountLolInfo.cs
-public class DetailAccountViewModel
+public class ListAccountViewModel
 {
     public Guid AccountId { get; set; }
     public string? UserName { get; set; } //tên của người dùng.
@@ -9,14 +9,9 @@ public class DetailAccountViewModel
     public string? AvailableRiotPoints { get; set; }
     public string? Server { get; set; }
     public string? Level { get; set; }
-    public string? Honor { get; set; }
     public string? AvailableBlueEssence { get; set; }
-    public string? PrevSeasonSoloDuo { get; set; }
-    public string? PrevSeasonFlex { get; set; }
     public string? RankFlex { get; set; }
     public string? RankSoloDuo { get; set; }
-    public string? FirstServerOfAccount { get; set; }
-    public string? AccountCreatedAt { get; set; }
     public string? Champions { get; set; }
     public string? Skins { get; set; }
     public string? Chromas { get; set; }
@@ -25,6 +20,5 @@ public class DetailAccountViewModel
     public string? Emotes { get; set; }
     public int? Prestige { get; set; }
     public string? OfflineTime { get; set; }
-    public string? DateUpdateAccount { get; set; }
-    public string? Views { get; set; }
+    public string? WinRate { get; set; }
 }

@@ -37,21 +37,17 @@ public class AccountController : Controller
 
         DetailAccountViewModel detailAccountViewModel = new DetailAccountViewModel()
         {
-            Id = "123",
             AccountId = Guid.NewGuid(),
             Price = account?.Price ?? 0,
             AvailableRiotPoints = accountLolInfo?.AvailableRiotPoints ?? "0",
             Level = accountLolInfo?.Level ?? "0",
-            ProfileBanner = accountLolInfo?.ProfileBanner ?? "0",
             Honor = accountLolInfo?.Honor ?? "0",
-            Server = accountLolInfo?.Server ?? "0",
             Champions = accountLolInfo?.Champions ?? "0",
             Skins = accountLolInfo?.Skins ?? "0",
-            Chroma = accountLolInfo?.Chroma ?? "0",
+            Chromas = accountLolInfo?.Chroma ?? "0",
             WardSkins = accountLolInfo?.WardSkins ?? "0",
             SumIcons = accountLolInfo?.SumIcons ?? "0",
             Emotes = accountLolInfo?.Emotes ?? "0",
-            FlexDivision = accountLolInfo?.FlexDivision ?? "0"
         };
         return View(detailAccountViewModel);
     }
