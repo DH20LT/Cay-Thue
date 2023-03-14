@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using CayThue.Models.Accounts;
 using CayThue.Models.AccountLolInfos;
 using CayThue.Models.Users;
+using CayThue.Models.TradeHistory;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,7 @@ builder.Services.AddControllersWithViews().AddViewLocalization();
 builder.Services.AddScoped<IAccountRep, AccountRep>();
 builder.Services.AddScoped<IUserRep, UserRep>();
 builder.Services.AddScoped<IAccountLolInfoRep, AccountLolInfoRep>();
+builder.Services.AddScoped<ITradeRep, TradeRep>();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Translate");
 

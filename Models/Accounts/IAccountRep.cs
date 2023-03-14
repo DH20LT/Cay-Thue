@@ -1,4 +1,6 @@
-﻿namespace CayThue.Models.Accounts;
+﻿using CayThue.Models.Users;
+
+namespace CayThue.Models.Accounts;
 
 public interface IAccountRep
 {
@@ -10,6 +12,16 @@ public interface IAccountRep
     IEnumerable<Account> GetAccountsByDescription(string description);
     IEnumerable<Account> GetAccountsByIsVerify(bool isVerify);
     IEnumerable<Account> GetAccountsByCanChangeInfo(bool canChangeInfo);
+    
+    /// <summary>
+    /// Get user id by account id
+    /// </summary>
+    /// <param name="id"> Account id
+    /// </param>
+    /// <returns>
+    /// User
+    /// </returns>
+    User GetUserByAccountId(Guid id);
 
     void AddAccount(Account account);
     

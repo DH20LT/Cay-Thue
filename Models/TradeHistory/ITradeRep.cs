@@ -2,6 +2,9 @@
 
 public interface ITradeRep
 {
+    /**
+     * Add new Trade
+     */
     void Add(Trade trade);
     
     void Delete(string id);

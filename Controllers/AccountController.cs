@@ -11,13 +11,13 @@ namespace CayThue.Controllers;
  */
 public class AccountController : Controller
 {
+    private readonly ILogger<AccountController> _logger;
+    
     private readonly IStringLocalizer<AccountController> _localizer;
 
     private readonly IAccountRep _accountRep;
 
     private readonly IAccountLolInfoRep _accountLolInfoRep;
-    
-    private readonly ILogger<AccountController> _logger;
 
     public AccountController(
         IStringLocalizer<AccountController> localizer,

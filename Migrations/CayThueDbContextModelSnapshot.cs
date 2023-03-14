@@ -189,7 +189,7 @@ namespace CayThue.Migrations
                     b.ToTable("PaymentHistory");
                 });
 
-            modelBuilder.Entity("CayThue.Models.TradeHistory.Trade", b =>
+            modelBuilder.Entity("CayThue.Models.Trades.Trade", b =>
                 {
                     b.Property<Guid?>("Id")
                         .ValueGeneratedOnAdd()
@@ -252,7 +252,7 @@ namespace CayThue.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TradeHistory");
+                    b.ToTable("Trades");
                 });
 
             modelBuilder.Entity("CayThue.Models.Users.User", b =>

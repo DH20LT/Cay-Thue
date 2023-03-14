@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CayThue.Models.TradeHistory;
 
+[Table("Trades")]
 public class Trade
 {
     [Key]

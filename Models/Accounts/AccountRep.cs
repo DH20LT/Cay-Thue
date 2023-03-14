@@ -1,4 +1,6 @@
-﻿namespace CayThue.Models.Accounts;
+﻿using CayThue.Models.Users;
+
+namespace CayThue.Models.Accounts;
 
 public class AccountRep : IAccountRep
 {
@@ -60,7 +62,16 @@ public class AccountRep : IAccountRep
     {
         throw new NotImplementedException();
     }
-    
+
+    public User GetUserByAccountId(Guid id)
+    {
+        Account account = _cayThueDbContext.Accounts.Find(id);
+        
+        User user = _cayThueDbContext.Users.Find(account.UserId);
+        
+        return user;
+    }
+
     public void AddAccount(Account account)
     {
         _cayThueDbContext.Accounts.Add(account);

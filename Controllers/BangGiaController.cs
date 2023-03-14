@@ -15,6 +15,7 @@ public class BangGiaController : Controller
     
     public IActionResult BangGia()
     {
+        _logger.LogInformation("BangGia");
         return View();
     }
     

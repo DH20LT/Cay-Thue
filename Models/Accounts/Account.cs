@@ -16,6 +16,9 @@ public class Account
 
     public string? Description { get; set; }
 
+    /**
+     * User who sell this account
+     */
     public string? UserId { get; set; }
 
     public bool? IsVerify { get; set; }

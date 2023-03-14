@@ -34,7 +34,7 @@ public class CayThueDbContext : DbContext
     
     public DbSet<Payment> PaymentHistory { get; set; }
     
-    public DbSet<Trade> TradeHistory { get; set; }
+    public DbSet<Trade> Trades { get; set; }
     
     public DbSet<Rank> Ranks { get; set; }
 

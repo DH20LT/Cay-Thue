@@ -1,3 +1,10 @@
+@model GiaoDichViewModel
+
+@{
+    // Create a variable to store account
+    var account = Model.Account;
+}
+
 <div class="main">
 <!-- Bắt đầu Content -->
 <div class="header-title px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center mb-0 pad-top-16">
@@ -23,7 +30,7 @@
                     <tbody>
                     <tr>
                         <th>Giá cả hàng hóa</th>
-                        <td>¥900</td>
+                        <td>@account.Price</td>
                     </tr>
                     <tr>
                         <th>Ngày mua</th>

@@ -2,9 +2,22 @@
 
 public class TradeRep : ITradeRep
 {
+    private readonly ILogger<TradeRep> _logger;
+    
+    private readonly CayThueDbContext _cayThueDbContext;
+    
+    public TradeRep(CayThueDbContext cayThueDbContext,
+        ILogger<TradeRep> logger
+        )
+    {
+        _cayThueDbContext = cayThueDbContext;
+        _logger = logger;
+    }
+    
     public void Add(Trade trade)
     {
-        throw new NotImplementedException();
+        _cayThueDbContext.Trades.Add(trade);
+        _cayThueDbContext.SaveChanges();
     }
 
     public void Delete(string id)

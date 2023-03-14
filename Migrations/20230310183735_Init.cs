@@ -60,7 +60,7 @@ namespace CayThue.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TradeHistory",
+                name: "Trades",
                 columns: table => new
                 {
                     ID = table.Column<Guid>(type: "TEXT", nullable: false),
@@ -117,7 +117,7 @@ namespace CayThue.Migrations
                 name: "PaymentHistory");
 
             migrationBuilder.DropTable(
-                name: "TradeHistory");
+                name: "Trades");
 
             migrationBuilder.DropTable(
                 name: "Users");
